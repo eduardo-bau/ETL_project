@@ -1,4 +1,5 @@
 import duckdb
+from commons import Commons
 
 
 def main_extraction(csv_data, table_name, connection):
@@ -27,8 +28,9 @@ def main_extraction(csv_data, table_name, connection):
     connection.sql(query)
 
 if __name__ == "__main__":
-    con = duckdb.connect("database/project_database.db")
-    csv_data = 'data/facebook_clicks.csv'
-    table_name_1 = 'facebook_csv'
-    main_extraction(csv_data, table_name_1, con)
-    con.close()
+    com = Commons()
+    conn = com.conn_db
+    csv_data = com.facebook_data
+    table_name_1 = com.facebook_table
+    main_extraction(csv_data, table_name_1, conn)
+    conn.close()
