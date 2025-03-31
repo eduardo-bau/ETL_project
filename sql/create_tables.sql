@@ -19,5 +19,4 @@ create table if not exists event (
     cost FLOAT,
     revenue FLOAT,
     properties JSON
-
 );
