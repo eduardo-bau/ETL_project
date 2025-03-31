@@ -1,7 +1,11 @@
-# ETL_project
+# ETL Project
 
-This project was made in python, using duckdb and polars.
+This project was developed in Python using DuckDB and Polars.
 
-First file ingest 3 csv files which are fb_clicks, google clicks and site_events. The ingestion is made executing with python duckdb API creating schemas where the csv will be stored.
+The first script ingests three CSV files (`fb_clicks`, `google_clicks`, and `site_events`) by executing the DuckDB API in Python, creating schemas to store the CSV data.
 
-Second file makes the corresponing transformations where 3 tables are unionized then necesary columns are selected, the resulting dataframe processed with polars is then write to a table in duckdb wich is the las step of the etl.
+The second script performs the necessary transformations:
+- Unionizes the three tables
+- Selects the required columns
+- Processes the resulting DataFrame with Polars
+- Writes the final output to a DuckDB table, completing the ETL pipeline.
